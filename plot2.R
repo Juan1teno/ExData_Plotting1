@@ -17,5 +17,5 @@ hpc = hpc[hpc$date >= as.Date("2007-02-01") & hpc$date<=as.Date("2007-02-02"),]
 # make plot and save plot2.png
 png(filename="plot2.png", width=480, height=480, units="px")
 plot(hpc$globalActivePower, type="l",xaxt="n",xlab="", ylab="Global Active Power (kilowatts)")
-axis(1, at=c(1, as.integer(nrow(df)/2), nrow(df)), labels=c("Thu", "Fri", "Sat"))
+axis(1, at=c(1, as.integer(nrow(hpc)/2), nrow(hpc)), labels=c("Thu", "Fri", "Sat"))
 dev.off()
